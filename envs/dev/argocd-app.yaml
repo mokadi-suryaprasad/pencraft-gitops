@@ -1,1 +1,23 @@
-dev-argocd
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pencraft-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/<username>/pencraft-gitops.git
+    targetRevision: main
+    path: charts/pencraft
+    helm:
+      valueFiles:
+        - ../../envs/dev/values-dev.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: pencraft-dev
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

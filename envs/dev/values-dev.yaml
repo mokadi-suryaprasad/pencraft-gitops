@@ -1,1 +1,7 @@
-dev-values
+backend:
+  image: "asia-south1-docker.pkg.dev/PROJECT-ID/pencraft/java-store:dev"
+  replicaCount: 1
+
+frontend:
+  image: "asia-south1-docker.pkg.dev/PROJECT-ID/pencraft/frontend:dev"
+  replicaCount: 1

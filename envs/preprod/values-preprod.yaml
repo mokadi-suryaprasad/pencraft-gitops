@@ -1,1 +1,7 @@
-preprod-values
+backend:
+  image: "asia-south1-docker.pkg.dev/PROJECT-ID/pencraft/java-store:preprod"
+  replicaCount: 2
+
+frontend:
+  image: "asia-south1-docker.pkg.dev/PROJECT-ID/pencraft/frontend:preprod"
+  replicaCount: 2
