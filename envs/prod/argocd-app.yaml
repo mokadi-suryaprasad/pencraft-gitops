@@ -5,9 +5,10 @@ metadata:
   namespace: argocd
 spec:
   project: default
+
   source:
-    repoURL: https://github.com/<username>/pencraft-gitops.git
-    targetRevision: main
+    repoURL: https://github.com/mokadi-suryaprasad/pencraft-gitops.git
+    targetRevision: release        # ← Prod pipeline always updates `release` branch
     path: charts/pencraft
     helm:
       valueFiles:
@@ -20,4 +21,4 @@ spec:
   syncPolicy:
     automated:
       prune: true
-      selfHeal: false     # ❗ NO auto-sync for production
+      selfHeal: false   # NO AUTO-HEAL for production
