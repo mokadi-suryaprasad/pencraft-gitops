@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<username>/pencraft-gitops.git
+    repoURL: https://github.com/mokadi-suryaprasad/pencraft-gitops.git
     targetRevision: main
     path: charts/pencraft
     helm:
@@ -22,4 +22,4 @@ spec:
       prune: true
       selfHeal: true
 
-##dev
+
