@@ -5,9 +5,10 @@ metadata:
   namespace: argocd
 spec:
   project: default
+
   source:
-    repoURL: https://github.com/<username>/pencraft-gitops.git
-    targetRevision: main
+    repoURL: https://github.com/mokadi-suryaprasad/pencraft-gitops.git
+    targetRevision: preprod
     path: charts/pencraft
     helm:
       valueFiles:
